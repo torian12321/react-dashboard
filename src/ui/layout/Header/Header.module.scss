@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 10px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #222;
+}
+.role {
+  color: #555;
+}
