@@ -1,17 +1,15 @@
 import React from 'react';
-import Button from '../ui/components/Button';
-import Panel from '../ui/components/Panel';
-import styles from './App.module.scss';
+import { FirebaseAuthConsumer } from "@react-firebase/auth";
+import SignIn from '../ui/views/SignIn';
+import DashBoard from '../ui/layout';
 
 const App = () => (
-  <div className={styles.app}>
-    <header>
-      demo
-      <Panel title='test'>
-        <Button label='Bla bla' onClick={()=> {}} />
-      </Panel>
-    </header>
-  </div>
+  <FirebaseAuthConsumer>
+    {({ isSignedIn = false }) => !isSignedIn
+      ? <SignIn />
+      : <DashBoard />
+    }
+  </FirebaseAuthConsumer>
 );
 
 export default App;

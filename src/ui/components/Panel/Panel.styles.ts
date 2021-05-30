@@ -23,4 +23,6 @@ export const Body = styled(Box)`
   flex-grow: 1;
   background: var(--color-white);
   color: #222;
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 `;
