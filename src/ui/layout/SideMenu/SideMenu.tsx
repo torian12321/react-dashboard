@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
-// import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
-import { PATHS } from '../../../consts';
+import { PATHS } from 'consts';
 import Btn from './SideMenu.Btn';
 import styles from './SideMenu.module.scss';
 
