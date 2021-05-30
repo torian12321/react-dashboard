@@ -1,12 +1,12 @@
 import React from 'react';
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 // import { FirebaseAuthConsumer } from "@react-firebase/auth";
 import Button from '../../components/Button';
 import styles from './Settings.module.scss';
 
 const Settings = () => {
   const handleOnLogout = () => {
-    firebase.auth().signOut();
+    // firebase.auth().signOut();
   };
 
   return (
