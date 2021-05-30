@@ -1,7 +1,7 @@
 import React from 'react';
 // import firebase from "firebase/app";
 // import { FirebaseAuthConsumer } from "@react-firebase/auth";
-import Button from '../../components/Button';
+import Button from 'ui/components/Button';
 import styles from './Settings.module.scss';
 
 const Settings = () => {

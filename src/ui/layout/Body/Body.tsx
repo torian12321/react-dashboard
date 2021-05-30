@@ -1,8 +1,8 @@
 import React from 'react';
-import Panel from '../../components/Panel';
+import Panel from 'ui/components/Panel';
 import { Route, Redirect } from "react-router-dom";
-import { PATHS } from '../../../consts';
-import Settings from '../../views/Settings';
+import { PATHS } from 'consts';
+import Settings from 'ui/views/Settings';
 import styles from './Body.module.scss';
 
 const Body = () => (
