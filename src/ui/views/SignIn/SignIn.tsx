@@ -1,10 +1,10 @@
 import * as React from "react";
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 
 export const SignIn = () => {
   const handleGoogleAuth = () => {
-    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(googleAuthProvider);
+    // const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    // firebase.auth().signInWithPopup(googleAuthProvider);
   };
 
   return (
