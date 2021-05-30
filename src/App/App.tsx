@@ -9,6 +9,7 @@ import DashBoard from 'ui/layout';
 
 const App = () => {
   console.log('App ini');
+  console.log(config);
   return (
     <FirebaseAuthProvider {...config} firebase={firebase}>
       <FirebaseAuthConsumer>
