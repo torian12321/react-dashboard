@@ -1,16 +1,22 @@
 import React from 'react';
 import Panel from '../../components/Panel';
+import { Route, Redirect } from "react-router-dom";
+import { PATHS } from '../../../consts';
+import Settings from '../../views/Settings';
 import styles from './Body.module.scss';
 
 const Body = () => (
-  <div className={styles.wrapper}>
-    <header className={styles.header}>
-      username
-    </header>
-    <Panel title='Settings' className={styles.panel}>
-      abccc
-    </Panel>
-  </div>
+  <Panel title='Settings' className={styles.panel}>
+    <Route exact path={PATHS.DASHBOARD.path}>
+    aaaaa
+    </Route>
+    <Route exact path={PATHS.SETTINGS.path}>
+      <Settings />
+    </Route>
+    <Route path="/">
+      <Redirect to={PATHS.DASHBOARD.path} />
+    </Route>
+  </Panel>
 );
 
 export default Body;

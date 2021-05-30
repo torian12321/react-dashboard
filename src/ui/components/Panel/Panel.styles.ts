@@ -15,6 +15,7 @@ export const Box = styled.div`
 export const Header = styled(Box)`
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
+  font-weight: bold;
   background: var(--color-sec);
   color: #222;
 `;

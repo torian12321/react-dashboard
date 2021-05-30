@@ -1,0 +1,46 @@
+$gutter-x: 20px;
+
+.wrapper {
+  position: absolute;
+  height: 100vh;
+};
+
+.menu {
+  width: 180px;
+  padding: 30px 0;
+  background: white;
+  box-shadow: 0px 0px 11px -5px #000000;
+  position: absolute;
+  height: 100vh;
+  border-right: 1px solid var(--color-sec);
+}
+.title {
+  font-weight: bold;
+  padding: 0px $gutter-x 8px;
+  display: block;
+}
+
+.menuLinksList{
+  list-style: none;
+  padding: 0;
+}
+.link {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  padding: 10px $gutter-x;
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+  &,
+  &:active,
+  &:active {
+    color: #555;
+  }
+  &:hover {
+    background: #fdf8e4;
+    border-left-color: var(--color-sec);
+  }
+}
+.linkActive {
+  background: #fef9ea;
+}
