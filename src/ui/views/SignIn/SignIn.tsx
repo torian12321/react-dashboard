@@ -2,31 +2,24 @@ import * as React from "react";
 import firebase from "firebase/app";
 
 export const SignIn = () => {
+  const handleGoogleAuth = () => {
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(googleAuthProvider);
+  };
+
   return (
     <div>
-      <button
-        onClick={() => {
-          const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth().signInWithPopup(googleAuthProvider);
-        }}
-      >
+      <button onClick={handleGoogleAuth}>
         Sign In with Google
       </button>
-      <button
+      {/* <button
         data-testid="signin-anon"
         onClick={() => {
           firebase.auth().signInAnonymously();
         }}
       >
         Sign In Anonymously
-      </button>
-      <button
-        onClick={() => {
-          firebase.auth().signOut();
-        }}
-      >
-        Sign Out
-      </button>
+      </button> */}
     </div>
   );
 };
