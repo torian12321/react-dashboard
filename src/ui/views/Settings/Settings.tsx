@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from "firebase/app";
-import { FirebaseAuthConsumer } from "@react-firebase/auth";
+// import { FirebaseAuthConsumer } from "@react-firebase/auth";
 import Button from '../../components/Button';
 import styles from './Settings.module.scss';
 

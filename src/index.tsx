@@ -2,16 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/styles/index.scss';
 import App from './App';
-import Layout from './ui/layout';
 import { AuthProvider } from './context/AuthContext';
-// import App from './ui/views/SignUp';
-// import { AuthProvider } from "./ui/views/AuthContext";
-// import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Layout />
-    <App /> */}
     <AuthProvider>
       <App />
     </AuthProvider>
