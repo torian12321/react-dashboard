@@ -1,25 +1,23 @@
 import * as React from "react";
-// import firebase from "firebase/app";
+import Card from 'ui/components/Card';
+import Button from 'ui/components/Button';
+import firebase from "firebase/app";
+import styles from './SignIn.module.scss';
 
 export const SignIn = () => {
   const handleGoogleAuth = () => {
-    // const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-    // firebase.auth().signInWithPopup(googleAuthProvider);
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(googleAuthProvider);
   };
 
   return (
-    <div>
-      <button onClick={handleGoogleAuth}>
-        Sign In with Google
-      </button>
-      {/* <button
-        data-testid="signin-anon"
-        onClick={() => {
-          firebase.auth().signInAnonymously();
-        }}
-      >
-        Sign In Anonymously
-      </button> */}
+    <div className={styles.page}>
+      <Card>
+        <Button
+          label='Sign In with Google'
+          onClick={handleGoogleAuth}
+        />
+      </Card>
     </div>
   );
 };

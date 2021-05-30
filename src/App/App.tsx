@@ -7,26 +7,19 @@ import { config } from "config";
 import SignIn from 'ui/views/SignIn';
 import DashBoard from 'ui/layout';
 
-const App = () => {
-  console.log('App ini');
-  console.log(config);
-  return (
-    <FirebaseAuthProvider {...config} firebase={firebase}>
-      <FirebaseAuthConsumer>
-        {({ isSignedIn = false }) => {
-          console.log('App consumer');
-          return !isSignedIn
-          ? <SignIn />
-          : (
-            <BrowserRouter>
-              <DashBoard />
-            </BrowserRouter>
-          )
-        }
-      }
-      </FirebaseAuthConsumer>
-    </FirebaseAuthProvider>
-  );
-};
+const App = () => (
+  <FirebaseAuthProvider {...config} firebase={firebase}>
+    <FirebaseAuthConsumer>
+      {({ isSignedIn = false }) => !isSignedIn
+        ? <SignIn />
+        : (
+          <BrowserRouter>
+            <DashBoard />
+          </BrowserRouter>
+        )
+    }
+    </FirebaseAuthConsumer>
+  </FirebaseAuthProvider>
+);
 
 export default App;
