@@ -4,6 +4,27 @@ $gutter-x: 20px;
   position: absolute;
   height: 100vh;
 };
+.btn {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+
+  background: white;
+  line-height: 0;
+  z-index: 200;
+  font-size: 48px;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 11px -5px #000000;
+  border: var(--color-sec) solid 2px;
+  fill: var(--color-sec);
+  &:hover {
+    background: #fef9ea;
+  }
+}
 
 .menu {
   width: 180px;
@@ -13,6 +34,13 @@ $gutter-x: 20px;
   position: absolute;
   height: 100vh;
   border-right: 1px solid var(--color-sec);
+
+  
+  margin-left: -181px;
+  transition: margin 1s;
+  &.isOpen {
+    margin-left: 0;
+  }
 }
 .title {
   font-weight: bold;
