@@ -39,7 +39,7 @@ const SideMenu = () => {
         </span>
 
         <ul className={styles.menuLinksList}>
-          <Link href={PATHS.HOME.path} label={PATHS.DASHBOARD.label} onClick={closeMenu} />
+          <Link href={PATHS.DASHBOARD.path} label={PATHS.DASHBOARD.label} onClick={closeMenu} />
           <Link href={PATHS.SETTINGS.path} label={PATHS.SETTINGS.label} onClick={closeMenu} />
         </ul>
       </div>

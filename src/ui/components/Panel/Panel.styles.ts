@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   border-radius: var(--border-radius);
   box-shadow: 0px 0px 11px -5px #000000;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const Box = styled.div`
@@ -26,4 +28,6 @@ export const Body = styled(Box)`
   color: #222;
   border-bottom-right-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
 `;

@@ -20,8 +20,11 @@ export const Btn: any = styled.button`
   `};
 
   ${(props: any) => props.disabled && `
-    color: #555;
-    background: #ddd;
-    border-color: #ddd;
+    &,
+    &:hover {
+      color: #555;
+      background: #ddd;
+      border-color: #ddd;
+    }
   `};
 `;
