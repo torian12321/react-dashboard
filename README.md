@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Basic info
 
-
+Login page that moves onto a Dashboard Admin area, which cannot be accessed without being logged in.
 
 ## Setup Instructions
 
@@ -17,11 +17,14 @@ To build a production copy, run `npm build`
 
 ## Technologies
   - [React](https://reactjs.org/)
-  - [Redux](https://redux.js.org/)
   - [Typescript](https://www.typescriptlang.org/)
   - [CSS-modules](https://github.com/css-modules/css-modules)
   - [SASS](https://sass-lang.com/)
+  - [Firebase](https://www.npmjs.com/package/firebase)
 
 
 ## TODO
-
+  - Add Form validations (valid email, etc)
+  - Add 'SignIn' page
+  - Add 'Forgot password' view
+  - Fix 'blinking' on reload dashboard
