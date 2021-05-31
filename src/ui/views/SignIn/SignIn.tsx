@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Card from 'ui/components/Card';
 import Button from 'ui/components/Button';
 import Field from 'ui/components/Field';
+import Message from 'ui/components/Message';
 import firebase from "firebase/app";
 import styles from './SignIn.module.scss';
 
 export const SignIn = () => {
   const [email, setEmail]: any = useState('');
   const [password, setPassword]: any = useState('');
+  const [passwordConfirm, setPasswordConfirm]: any = useState('');
   // const passwordConfirmRef: any = useRef();
   // const { signup, signupGoogle }: any = useAuth();
-  // const [error, setError] = useState("");
+  const [error, setError] = useState("");
   // const [loading, setLoading] = useState(false);
   // const history = useHistory();
 
@@ -20,17 +22,26 @@ export const SignIn = () => {
   // };
 
   async function handleSignIn(e: Event) {
+    if (!email) {
+      return setError("Missing email")
+    }
+    if (!email) {
+      return setError("Missing Password")
+    }
+    if (password !== passwordConfirm) {
+      return setError("Passwords do not match")
+    }
     // e.preventDefault()
     console.log(email, password);
     // console.log(ref.current.value);
-    try {
-      // setError("")
-      // setLoading(true)
-      // await login(emailRef.current.value, passwordRef.current.value)
-      // history.push("/")
-    } catch {
-      // setError("Failed to log in")
-    }
+    // try {
+    //   // setError("")
+    //   // setLoading(true)
+    //   // await login(email, password);
+    //   // history.push("/")
+    // } catch {
+    //   // setError("Failed to log in")
+    // }
 
     // setLoading(false)
   }
@@ -43,6 +54,7 @@ export const SignIn = () => {
   return (
     <div className={styles.page}>
       <Card>
+        {!!error && <Message message={error} />}
         <Field
           required
           type='email'
@@ -56,6 +68,13 @@ export const SignIn = () => {
           label='Password'
           placeholder='1234567890'
           onChange={setPassword}
+        />
+        <Field
+          required
+          type='password'
+          label='Password Confirmation'
+          placeholder='1234567890'
+          onChange={setPasswordConfirm}
         />
         <Button
           label='Sign In'
