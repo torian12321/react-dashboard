@@ -7,7 +7,7 @@ export const Btn = styled.button`
   padding: .8em 2em;
   font-weight: bold;
   background: var(--color-sec);
-  color: #222;
+  color: white;
   box-sizing: border-box;
   &:hover {
     background: var(--color-sec-darker);

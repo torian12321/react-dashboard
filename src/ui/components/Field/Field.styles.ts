@@ -24,7 +24,6 @@ export const Label = styled.label`
 export const Field = styled.input`
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
-  font-weight: bold;
   background: var(--color-sec);
   color: #222;
   border: none;

@@ -23,7 +23,6 @@ const Panel : React.FunctionComponent<Props> = ({
         type={type}
         required={required}
         onChange={handleOnChange}
-        onKeyUp={handleOnChange}
       >
         {children}
       </FieldBox>
