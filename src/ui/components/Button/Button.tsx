@@ -7,6 +7,7 @@ const Button: React.FunctionComponent<Props> = ({
   children,
   label,
   disabled = false,
+  outline = false,
   onClick,
 }: Props) => {
   const content = children || label;
@@ -21,6 +22,7 @@ const Button: React.FunctionComponent<Props> = ({
       className={className}
       disabled={disabled}
       onClick={handleClick}
+      outline={outline}
     >
       {content}
     </Btn>

@@ -4,4 +4,5 @@ export interface Props {
   label?: string,
   onClick: Function,
   disabled?: boolean,
+  outline?: boolean,
 };
