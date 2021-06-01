@@ -3,7 +3,7 @@ import { FirebaseAuthConsumer } from "@react-firebase/auth";
 import Header from './Header';
 import SideMenu from './SideMenu';
 import Body from './Body';
-import styles from './Layout.module.scss';
+import styles from './styles.module.scss';
 
 const Layout = ({ setName, addDetails }: any) => {
   const [userInfo, setUserInfo]: any = useState({});
