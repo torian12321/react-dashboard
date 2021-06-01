@@ -28,7 +28,7 @@ const reducer = (state = initialState, action: State & Action) => {
         ...state,
         details: {
           ...state.details,
-          details,
+          ...details,
         }
       };
     case ACTIONS.USER_RESET:

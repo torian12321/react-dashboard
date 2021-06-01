@@ -7,6 +7,18 @@ const getUser = (state: AppState): StateUser =>
 
 export const getUserDetails = createSelector(
   getUser,
-  (user: StateUser): Object =>
-  user.details || {}
+  (user: StateUser): any =>
+    user.details || {}
+);
+
+export const getUserName = createSelector(
+  [getUser, getUserDetails],
+  (user: StateUser, details): string =>
+    user.name || details.email || 'Anonymous'
+);
+
+export const getUserRole = createSelector(
+  getUser,
+  (user: StateUser): string =>
+    user.role || ''
 );
